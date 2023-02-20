@@ -1,9 +1,5 @@
 /* globals showdown */
 
-/* ------------------- event handler for holding onbeforeunload even for window ---------------------- */ 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
 
 
 let map = L.map('map').setView([40.00, -75.14], 11);
@@ -25,6 +21,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //   maxZoom: 20,
 //   attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 // }).addTo(map);
+
+
+
+/* ------------------- event handler for holding onbeforeunload even for window ---------------------- */ 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 
 /* ---------------------- STYLES ---------------------- */
 /*
@@ -230,10 +234,10 @@ data: historic street Philly
 // style geojson
 function style(feature) {
   return {
-    fillColor: '#bdb2ff',
+    fillColor: '#FF69B4',
     weight: 2,
     opacity: 1,
-    color: '#bdb2ff',
+    color: '#FF69B4',
     fillOpacity: 0.7
   };
 }
@@ -689,7 +693,7 @@ function style_1(feature) {
 function style_2(feature) {
   return {
     fillColor: '#2ec4b6',
-    weight: 1,
+    weight: 3,
     opacity: 1,
     color: '#2ec4b6',
     fillOpacity: 0.7,
